@@ -1,0 +1,33 @@
+1. Task0
+Total: O(n)
+Read in the files and turn them into list has time complexity of O(n).
+Find and print the first/last item has time complexity of O(1).
+So total complexity of the code is O(n)
+
+2. Task1
+Total: O(n)
+Read in the files and turn them into list has time complexity of O(n).
+Find and store all tel nums in a set has time complexity of O(n)
+so total complexity of the code is O(n)
+
+3. Task2
+Total: O(n)
+Read in the files and turn them into list has time complexity of O(n),
+Record call times for each tel num has time complexity of O(n),
+Loop through the dict storing tel num call times and find max has time complexity of O(n),
+so total complexity of the code is O(n)
+
+4. Task3
+Total: O(nlog(n))
+Read in the files and turn them into list has time complexity of O(n),
+Loop through each call has time complexity of O(n)
+Sort the area code of all call receivers has time complexity of O(nlog(n)),
+so total complexity of the code is O(nlog(n))
+
+5. Task4
+Total: O(nlog(n))
+Read in the files and turn them into list has time complexity of O(n),
+Loop through each call and each text has time complexity of O(n)
+Find the difference between all call makers and non tel marketers using python set differencee has time complexity of O(n),
+Sort the tel marketers's nums havs time complexity of O(nlog(n))
+so total complexity of the code is O(nlog(n))
