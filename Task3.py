@@ -43,3 +43,26 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+import re
+
+def get_area_code_from_tel_num(tel_num):
+    if tel_num.startswith("140"):
+        return "140"
+    elif " " in tel_num and tel_num[0] in ["7", "8", "9"]:
+        return tel_num[:4]
+    elif tel_num.startswith("("):
+        return re.findall(r"(0\d*)", tel_num)[0]
+
+bangalore_call_receiver_codes = set()
+total_bangalore_calls = 0
+total_bangalore_received_calls = 0
+for call in calls:
+    if call[0].startswith("(080)"):
+        total_bangalore_calls += 1
+        bangalore_call_receiver_codes.add(get_area_code_from_tel_num(call[1]))
+        if call[1].startswith("(080)"):
+            total_bangalore_received_calls += 1
+bangalore_call_receiver_codes = sorted(bangalore_call_receiver_codes)
+print("The numbers called by people in Bangalore have codes:\n{}".format('\n'.join(bangalore_call_receiver_codes)))
+
+print("{:.2%} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(total_bangalore_received_calls/total_bangalore_calls))
